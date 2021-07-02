@@ -477,17 +477,17 @@ static const int PRIME_X = 501125321;
 static const int PRIME_Y = 1136930381;
 static const int PRIME_Z = 1720413743;
 
-static inline int _fnlHash2D(int seed, int xPrimed, int yPrimed)
+static inline unsigned _fnlHash2D(unsigned seed, unsigned xPrimed, unsigned yPrimed)
 {
-    int hash = seed ^ xPrimed ^ yPrimed;
+    unsigned hash = seed ^ xPrimed ^ yPrimed;
 
     hash *= 0x27d4eb2d;
     return hash;
 }
 
-static inline int _fnlHash3D(int seed, int xPrimed, int yPrimed, int zPrimed)
+static inline unsigned _fnlHash3D(unsigned seed, unsigned xPrimed, unsigned yPrimed, unsigned zPrimed)
 {
-    int hash = seed ^ xPrimed ^ yPrimed ^ zPrimed;
+    unsigned hash = seed ^ xPrimed ^ yPrimed ^ zPrimed;
 
     hash *= 0x27d4eb2d;
     return hash;
